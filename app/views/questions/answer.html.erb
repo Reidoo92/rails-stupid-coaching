@@ -1,13 +1,17 @@
+<div class="mt-4 fs-5">
+  <div class="border-start border-5">
+    <div class="ms-3 py-1">
+      <p><%= @answer %></p>
+      <p class="fst-italic">–You<p>
+    </div>
+  </div>
 
-<p><%= @answer %></p>
-<p>- you</p>
+  <div class="border-start border-5 bg-warning bg-opacity-10">
+    <div class="ms-3 my-4 py-1">
+      <p class="fw-bold"><%= @coach_answer %></p>
+      <p class="fst-italic">–Your coach<p>
+    </div>
+  </div>
+</div>
 
-<% if @answer.include?("I am going to work")%>
-  <p>Great!</p>
-<% elsif @answer.include?("?")%>
-  <p>Silly question, get dressed and go to work!</p>
-<% else %>
-  <p>I don't care, get dressed and go to work!</p>
-<%end%>
-<p>-Your coach</p>
-<a href="/ask">Ask a new question</a>
+<%= link_to "Ask a new question", ask_path, class:"text-decoration-none" %>
